@@ -1,0 +1,195 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,       % no lik border color
+   allbordercolors=white    % white border color for all
+}
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Carlos}{Murillo Badilla}
+      {Information Systems Engineer}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{Address}
+    Heredia, San Pablo
+    ~
+  \section{Telephone}% \& Skype}
+    \href{tel:87409365}{(+506) 87409365}
+    %cmb28@hotmail.com
+    ~
+  \section{Mail}
+    \href{mailto:cmb2897@gmail.com}{cmb2897@gmail.com}
+    ~
+  \section{Git \& LinkedIn}
+    \href{https://github.com/CarlosMurillo2897/}{\textbf{github.com/}\\CarlosMurillo2897}
+    ~
+    \href{https://www.linkedin.com/in/carlos-mb/}{\textbf{linkedin.com/in/}\\carlos-mb}
+    ~
+  \section{Programming}
+    \includegraphics[scale=0.62]{img/Languages.png}
+    ~
+  \section{OS Preference}
+    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/1stars.png}
+    ~
+  \section{Databases}
+    \includegraphics[scale=0.62]{img/DB.png}
+    ~
+   \section{Languages}
+    \textbf{Spanish}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+\end{aside}
+
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2015 - 2019}
+    {Systems Engineering Bachelor Degree}
+    {National University of Costa Rica}
+    
+  %\entry
+    %{2015 - 2019}
+    %{Systems Engineering Diploma}
+    %{National University of Costa Rica}
+    
+\end{entrylist}
+
+\section{Certifications}
+\begin{entrylist}
+  \entry
+    {2017}
+    {CCNA Routing and Switching Module I}
+    {National University of Costa Rica}
+    
+    \entry
+    {2019}
+    {SCRUM Fundamentals Certified}
+    {SCRUMStudy}
+    
+\end{entrylist}
+
+\section{Further Training}
+\begin{entrylist}
+    \entry
+    {}
+    {Programming Languages}
+    {}
+    {C++, Android, JavaScript (Jquery, AJAX, Json), HTML(5), Python, JAVA, ASP.NET, PHP.}
+    ~
+    \entry
+    {}
+    {Databases}
+    {}
+    {SQL Server, MySQL, PostgreSQL, LINQ, Oracle Database, MongoDB, AirTable.}
+    ~
+    \entry
+    {}
+    {Offimatic}
+    {}
+    {Microsoft Office (2003/2007/2010/2016), Open Office.}
+    ~
+    \entry
+    {}
+    {Development tools}
+    {}
+    {Git, Visual Studio, Android Studio, Team Foundation Server(TFS), NetBeans, Visual Studio Code.}
+    ~
+    \entry
+    {}
+    {Agile methodologies}
+    {}
+    {Scrum.}
+    ~
+    \entry
+    {}
+    {OS}
+    {}
+    {Windows (7/8/10), Linux (Ubuntu, Mint, Ubuntu-MATE), Raspbian.}
+    
+\end{entrylist}
+
+\section{Projects}
+\begin{entrylist}
+    \entry
+    {2018 - 2019}
+    {Weights Gym Operating System - (SOGIP)}
+    {ICODER (National Sports Institute)}
+    %{The system for the public company ICODER (National Sports %Institute) is in design and development, which will manage %user accounts and personal information, gym routines, %activities, appointments for high performance athletes as %well as administrators, trainers, selections and public %entities.\\ \textbf{Programming language:} ASP.NET. 
+    {The ICODER Project is a .NET web application for the public company that manages user accounts, personal information, routines, activities and appointments for high performance athletes, company administrators, trainers, national sports teams and other users. \\
+    This application is a model view controller 5 architecture based software in an Entity Framework using Code-First and EPPlus libraries. \\
+    The software development process includes front-end code interfaces, back-end functionality and persistent storage in a Microsoft SQL Server Database. \\
+    \textbf{Programming Languages:} HTML, CSS, Javascript, ASP.NET. \\
+    \textbf{Development Tools:} Bootstrap, Visual Studio, GitHub. \\
+    \textbf{Total Development Time:} 1.5 years. \\
+    \textbf{Database:} SQL Server. } \\
+    
+    
+\end{entrylist}
+
+\section{Extra-Curricular Activities}
+\begin{entrylist}
+  \entry
+    {2015-2018}
+    {Member of "Coro Cámara de la Sierra"}
+    {National University of Costa Rica}
+    
+   \entry 
+    {2017-2018}
+    {Member of Electoral Boards}
+    {National University of Costa Rica}
+    
+\end{entrylist}
+
+\section{References}
+\begin{entrylist}
+  \entry
+    {}
+    {Jonathan Vindas Abarca, Middle Software Engineer, 88942282}
+    {}
+    
+    \entry
+    {}
+    {Joseph Granda Vargas, Director of information and communication technologies, 87276862}
+    {}
+    
+    \entry
+    {}
+    {Gilberto Loria Montero, Professional Civil Service, 88228415}
+    {}
+    
+    
+\end{entrylist}
+
+%%% This piece of code has been commented by Karol Kozioł due to biblatex errors. 
+% 
+%\printbibsection{article}{article in peer-reviewed journal}
+%\begin{refsection}
+%  \nocite{*}
+%  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+%\end{refsection}
+%\begin{refsection}
+%  \nocite{*}
+%  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+%\end{refsection}
+%\printbibsection{misc}{other publications}
+%\printbibsection{report}{research reports}
+
+\end{document}
