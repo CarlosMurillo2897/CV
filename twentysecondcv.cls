@@ -175,7 +175,7 @@
 	\renewcommand{\interests}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+				\draw[fill=maingray,maingray] (0,\i) rectangle (4.9,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
 				\node [above right] at (0,\i+0.4) {\x};
 			}
@@ -189,7 +189,7 @@
 
 \newcommand{\makeprofile}{
   \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=8.3cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
   %------------------------------------------------
@@ -257,18 +257,18 @@
 
     %------------------------------------------------
         
-        \profilesection{Programming}{1.4cm}
+        \profilesection{Programming}{0.3cm}\\\\
     	    \skills
         
     %------------------------------------------------
         
-        \profilesection{Languages}{2.3cm}\\\\
+        \profilesection{Languages}{1.2cm}\\\\
             \interests{
-        		{English/5.8},
-        		{Spanish/6}}
+        		{English/4.6},
+        		{Spanish/4.9}}
             \interests
         
-        \profilesection{Soft Skills}{2.5cm}\\
+        \profilesection{Soft Skills}{1.5cm}\\
             \begin{itemize}
                 \item Communicative Ability
                 \item Technology Passion
@@ -284,7 +284,7 @@
 
 \newcommand{\sidebar}{
  \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=8.3cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
   %------------------------------------------------
@@ -314,18 +314,11 @@
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
-
-% Command to create the rounded boxes around the first three letters of section titles
-\newcommand*\round[2]{%
-	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
-}
-
 \def\@sectioncolor#1#2#3{%
 	{%
 		\color{pblue} #1#2#3%
 	}%
 }
-
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
@@ -333,14 +326,7 @@
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
-  \par\vspace{\parskip}
-}
 
-\renewcommand{\subsection}[1]{
-	\par\vspace{.5\parskip}{%
-		\Large\headingfont\color{headercolor} #1%
-	}
-	\par\vspace{.25\parskip}%
 }
 
 \pagestyle{empty}
@@ -362,28 +348,9 @@
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#2}% 
 		\hfill%
-		{\footnotesize#3}\\%
-        \ifblank{#4}{}{#4 \\}
-		#5\vspace{\parsep}%
-	}\\
-}
-
-%----------------------------------------------------------------------------------------
-%	 SMALL LIST ENVIRONMENT
-%----------------------------------------------------------------------------------------
-
-\setlength{\tabcolsep}{0pt}
-
-% New environment for the small list
-\newenvironment{twentyshort}{%
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-	\end{tabular*}
-}
-
-\newcommand{\twentyitemshort}[2]{%
-	#1&\parbox[t]{0.83\textwidth}{%
-		#2%
+		{\footnotesize#3}%
+		\ifblank{#4}{\\}{#4}
+        #5\vspace{\parsep}%
 	}\\
 }
 
@@ -391,7 +358,7 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.7cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
 
 
 \usepackage{smartdiagram}
