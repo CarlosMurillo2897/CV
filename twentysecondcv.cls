@@ -22,6 +22,7 @@
 
 \usepackage{enumitem}
 \usepackage{booktabs}
+\usepackage{eso-pic}
 
 \usepackage{changepage}
 
@@ -187,6 +188,19 @@
 %  SIDEBAR LAYOUT
 %----------------------------------------------------------------------------------------
 
+\newcommand{\drawsidebarbg}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[
+      rectangle,
+      fill=sidecolor,
+      anchor=north west,
+      minimum width=6.2cm,
+      minimum height=\paperheight+1cm
+    ] at (current page.north west) {};
+  \end{tikzpicture}%
+}
+\AddToShipoutPictureBG{\drawsidebarbg}
+
 \newcommand{\makeprofile}{
   \begin{tikzpicture}[remember picture,overlay]
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=8.3cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
@@ -282,34 +296,7 @@
   \end{textblock}
 }
 
-\newcommand{\sidebar}{
- \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=8.3cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-  \end{tikzpicture}
-
-  %------------------------------------------------
-
-  \begin{textblock}{6}(0.5, 0.2)
-
-    %------------------------------------------------
-    
-
-
-    %------------------------------------------------
-    
-
-
-    %------------------------------------------------
-    
-
-    %------------------------------------------------
-
-        %------------------------------------------------
-
- 
- 
-  \end{textblock}
-}
+\newcommand{\sidebar}{}
 
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
@@ -337,21 +324,33 @@
 
 \setlength{\tabcolsep}{0pt}
 
-% New environment for the long list
-\newenvironment{twenty}{%
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-	\end{tabular*}
+\newlength{\twentydatewidth}
+\setlength{\twentydatewidth}{2.4cm}
+
+\newlist{twentylist}{itemize}{1}
+\setlist[twentylist]{
+  leftmargin=\twentydatewidth,
+  labelwidth=\dimexpr\twentydatewidth-0.15cm\relax,
+  labelsep=0.15cm,
+  align=left,
+  itemsep=\parsep,
+  parsep=0pt,
+  topsep=0pt,
+  partopsep=0pt
 }
 
-\newcommand{\twentyitem}[5]{%
-	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#2}% 
-		\hfill%
-		{\footnotesize#3}%
-		\ifblank{#4}{\\}{#4}
-        #5\vspace{\parsep}%
-	}\\
+\newenvironment{twenty}{%
+  \begin{twentylist}
+}{%
+  \end{twentylist}
+}
+
+\newcommand{\twentyitem}[4]{%
+  \item[#1]
+    \textbf{#2}%
+    \hfill
+    {\footnotesize#3}\\
+    #4%
 }
 
 %----------------------------------------------------------------------------------------
